@@ -53,7 +53,8 @@ _pure_set_default pure_threshold_command_duration 5
 _pure_set_default pure_color_command_duration $pure_color_warning
 
 # Right Prompt variables
-_pure_set_default pure_right_prompt ""
+function pure_right_prompt
+end
 _pure_set_default pure_color_right_prompt $pure_color_normal
 
 # VI mode indicator

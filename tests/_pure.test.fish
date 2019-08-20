@@ -195,10 +195,10 @@ set --local empty ''
 ) = 5
 
 @test "configure: pure_right_prompt"  (
-    set --erase pure_right_prompt
+    functions --erase pure_right_prompt
     source $current_dirname/../conf.d/pure.fish
-    echo $pure_right_prompt
-) = ""
+    pure_right_prompt
+) $status -eq 0
 
 @test "configure: pure_color_right_prompt"  (
     set --erase pure_color_right_prompt
