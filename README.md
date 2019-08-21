@@ -75,7 +75,7 @@ You can tweak pretty much everything in `pure` by overriding variables in your `
 | :------------------------------------- | :------ | :--------------------------------------------------- |
 | **`pure_symbol_prompt`**               | `❯`     | Prompt symbol.                                       |
 | **`pure_symbol_reverse_prompt`** | `❮`  | VI non-insert mode symbol.
-| **`pure_right_prompt`**                | ` `       | Content of the right prompt.                         |
+| **`function pure_right_prompt; end`**                | _empty_       | Function for the right prompt. [help?][right-prompt]                         |
 | **`pure_symbol_git_unpulled_commits`** | `⇣`     | Branch is behind upstream (commits to pull).         |
 | **`pure_symbol_git_unpushed_commits`** | `⇡`     | Branch is ahead upstream (commits to push).          |
 | **`pure_symbol_git_dirty`**            | `*`     | Repository is Dirty (uncommitted/untracked changes). |
@@ -145,3 +145,4 @@ MIT © [Rafael Rinaldi](http://rinaldi.io)
 [changelog-2.7.1]: https://github.com/fish-shell/fish-shell/releases/tag/2.7.1 "Changelog Fish 2.7.1"
 [changelog-3.0.0]: https://github.com/fish-shell/fish-shell/releases/tag/3.0.0 "Changelog Fish 3.0.0"
 [exit-code]: https://github.com/sindresorhus/pure/wiki#show-exit-code-of-last-command-as-a-separate-prompt-character "See pure-zsh wiki"
+[right-prompt]: https://github.com/rafaelrinaldi/pure/releases/tag/v3.0.0
