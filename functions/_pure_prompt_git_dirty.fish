@@ -9,10 +9,14 @@ function _pure_prompt_git_dirty
         or not command git diff --ignore-submodules --no-ext-diff --quiet --exit-code >/dev/null 2>&1
         and echo "true"
     )
+
     if test -n "$is_git_dirty"  # untracked or un-commited files
         set git_dirty_symbol "$pure_symbol_git_dirty"
         set git_dirty_color (_pure_set_color $pure_color_git_dirty)
+    else
+        set git_dirty_symbol "$pure_symbol_git_clean"
+        set git_dirty_color (_pure_set_color $pure_color_git_clean)
     end
 
-    echo "$git_dirty_color$git_dirty_symbol"
+    echo (set_color white)"[""$git_dirty_color$git_dirty_symbol"(set_color white)"]"
 end
